@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  mariadb:
+    image: mariadb:master  # Replace with the name of your built image
+    container_name: mariadb_master_server
+    volumes:
+      - data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: ahmad123 # Replace with your password
+    ports:
+      - "3307:3306"
+    restart: always
+
+volumes:
+  data:
